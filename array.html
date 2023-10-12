@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        В массиве заменить все числа, большие данного числа, на среднее арифметическое всех чисел массива.
+    </pre>
+    <script>
+        let array = [56, 78, 14, 34, 2, 0, -9];
+        let numberUser = +prompt("Enter the number, please",0);
+        let averValue = 0;
+        let count = 0; // find the amount of elements in array
+        let sum = 0;
+        alert(array);
+        for(let i = 0; i < array.length; i++)
+        {
+            sum += array[i];
+            count = i;
+        }
+        averValue = sum / (count+1);
+        
+        for(let i = 0; i < array.length; i++)
+        {
+            if(array[i] > numberUser)
+            {
+                array[i] = averValue;
+            }
+        }
+        alert(array);
+    </script>
+</body>
+</html>
